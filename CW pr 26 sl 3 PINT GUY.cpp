@@ -154,4 +154,9 @@ void DrawHead(HDC hdc) {
     LineTo(hdc, 240, 195);
 
     DeleteObject(pen);
+
+    HBRUSH el_brush = CreateSolidBrush(RGB(0, 0, 255));
+    SelectBrush(hdc, el_brush);
+    Ellipse(hdc, 500, 300, 700, 500);
+    DeleteObject(el_brush);
 }
